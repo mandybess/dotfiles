@@ -1,0 +1,47 @@
+" Case-insensitive searching.
+set ignorecase
+" But case-sensitive if expression contains a capital letter.
+set smartcase
+
+" Setup the number line
+set number
+set relativenumber
+
+" Use the system pasteboard
+set clipboard=unnamed
+
+
+" rename refactor
+" nnoremap ,r :xccmd refactorRename<CR>
+
+" Better navigation
+nnoremap H ^
+nnoremap L $
+
+" Run Current Configuration
+nnoremap <Space>r :action Run<CR>
+
+" Select Run / Build Configuration
+nnoremap <Space>c :action ChooseRunConfiguration<CR>
+
+"Replace Constructor With Builder
+nnoremap <Space>b :action ReplaceConstructorWithBuilder<CR>
+
+" Window navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+
+" Make computers make sense
+nnoremap Y y$
+
+" I'd like the following command to save too
+" it doesn't seem like xvim supports this: \| update<CR>
+vnoremap s :sort ui<CR>
+
+" vim-unimpared knock off
+nnoremap ]e "udd"up
+nnoremap [e "uddk"uP
+
+" Jump to counterpart
+" nnoremap <C-j> :xccmd jumpToPreviousCounterpart<CR>
+" nnoremap <C-k> :xccmd jumpToNextCounterpart<CR>
