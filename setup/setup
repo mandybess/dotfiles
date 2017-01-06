@@ -1,0 +1,22 @@
+#!/bin/sh
+
+set -e
+
+echo "Installing Homebrew packages..."
+brew update
+brew tap homebrew/bundle
+brew bundle
+for brewfile in */Brewfile; do
+  brew bundle --file="$brewfile"
+done
+
+echo "Linking dotfiles into ~..."
+# Before `rcup` runs, there is no ~/.rcrc, so we must tell `rcup` where to look.
+# We need the rcrc because it tells `rcup` to ignore thousands of useless Vim
+# backup files that slow it down significantly.
+RCRC=rcrc rcup -v -d .
+
+# Find all tag-specific setup files and source them
+for setup in tag-*/setup; do
+  . "$setup"
+done
