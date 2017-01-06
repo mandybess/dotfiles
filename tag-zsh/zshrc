@@ -1,0 +1,13 @@
+# your projects folder so that we can `c [tab]` to
+export PROJECTS="$HOME/code"
+
+# shortcut to this dotfiles path is $DOTFILES
+export DOTFILES="$PROJECTS/dotfiles"
+
+# Your personal Dropbox folder
+export DROPBOX="$HOME/Dropbox (Personal)"
+
+# source all zsh configurations for all tags
+ for config_file (~/.config/zsh/*.zsh) source $config_file
+
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
