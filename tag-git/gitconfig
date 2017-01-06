@@ -1,0 +1,59 @@
+[user]
+  name = Amanda Hill
+  email = amandabesshill@gmail.com
+
+[github]
+  user = mandybess
+
+[core]
+  excludesfile = ~/.gitignore
+  editor = vim
+  autocrlf = false
+
+[color]
+  ui = true
+
+[format]
+  pretty = %C(yellow)%h%Cblue%d%Creset %s - %C(white)%an %Cgreen(%cr)%Creset
+
+[status]
+  submodule = 1
+
+[fetch]
+  prune = true
+
+[pull]
+  rebase = true
+
+[push]
+  default = current
+
+[rebase]
+  autosquash = true
+
+[merge]
+  ff = only
+  tool = kdiff3
+
+[mergetool]
+  keepBackup = false
+  prompt = false
+
+[apply]
+  whitespace = warn
+
+[help]
+  autocorrect = 1
+
+[credential]
+  helper = osxkeychain
+
+[alias]
+  create-branch = !sh -c 'git push origin HEAD:refs/heads/$1 && git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1' -
+  delete-branch = !sh -c 'git push origin :refs/heads/$1 && git remote prune origin && git branch -D $1' -
+
+[filter "media"]
+  required = true
+  clean = git media clean %f
+  smudge = git media smudge %f
+
