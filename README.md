@@ -1,13 +1,15 @@
-# dotfilez
-these are my dot files
+# dotfiles :floppy_disk:
+welcome to my dotfiles :wave:! These are my dotfiles for Zsh, git, android and beyond :dizzy:
 
-## prerequisites
+Questions? Comments? Concerns? Complements? Open an issue or tweet at me  [@mandybess](https://twitter.com/mandybess)
+
+## prerequisites :clipboard:  
 
 * OS X
 * Zsh (to change your default shell to Zsh: `chsh -s $(which zsh) $USER`)
 * [Homebrew](http://brew.sh/)
 
-## installation
+## installation :wrench:  
     $ git clone git@github.com:mandybess/dotfiles.git $PROJECTS/dotfiles
     $ cd $DOTFILES
     $ ./setup/setup
@@ -17,7 +19,7 @@ if a file already exists (like if you already have `~/.zshrc`).
 
 [rcm]: http://thoughtbot.github.io/rcm/rcm.7.html
 
-## organization
+## organization :card_index:  
 
 This repo uses [rcm] for management. It's pretty dope, you should probably check it
 out :sunglasses:
@@ -35,7 +37,12 @@ The full list of what is being ignored is being controlled by the `EXCLUDES` key
 [rcrc]: https://github.com/gfontenot/dotfiles/blob/master/rcrc
 [rcm]: https://github.com/thoughtbot/rcm
 
-## attribution
+## styles :dizzy:  
+For every IDE or application I use in my regular development there is a corresponding `themes` folder (i.e. [`intelliji-themes`][intelliji-themes])
+
+[intelliji-themes]: https://github.com/mandybess/dotfiles/intelliji-themes
+
+## attribution :couple:  
 
 Many scripts and configurations (including this sentence) have been inspired by or outright stolen from
 my colleagues at thoughtbot. Of special note, I've stolen many things from
