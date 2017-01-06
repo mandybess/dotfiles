@@ -130,6 +130,11 @@ prompt_full_git_status(){
   fi
 }
 
+# wrap in brackets
+bracket_wrap(){
+  echo "$(prompt_red "[")$1$(prompt_red "]") "
+}
+
 # `precmd` is a magic function that's run right before the prompt is evaluated
 # on each line.
 # Here, it's used to capture the git status to show in the prompt.
@@ -146,4 +151,4 @@ function precmd {
 # is sourced but is evaluated every time we need the prompt.
 setopt prompt_subst
 
-PROMPT='$(prompt_shortened_path)$(prompt_full_git_status) $ '
+PROMPT='$(bracket_wrap "$(prompt_shortened_path)$(prompt_spaced $(prompt_full_git_status))")'
