@@ -8,8 +8,8 @@ set list listchars=tab:»·,trail:·,nbsp:·
 
 " Set the cursor to a vertical line in insert mode
 " and a solid block in command mode
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+autocmd InsertEnter * : silent exec "!printf '\033]50;CursorShape=1\x7'" | exec ":redraw!"
+autocmd InsertLeave * : silent exec "!printf '\033]50;CursorShape=0\x7'" | exec ":redraw!"
 
 " upon hitting escape to change modes,
 " send successive move-left and move-right
