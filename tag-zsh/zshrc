@@ -11,6 +11,7 @@ export DROPBOX="$HOME/Dropbox (Personal)"
 for config_file (~/.config/zsh/*.zsh) source $config_file
 
 # source the remaining zsh config files
+# the `^zsh` bit means all directories _except_ the `zsh` directory
 for config_file (~/.config/^zsh/*.zsh) source $config_file
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
