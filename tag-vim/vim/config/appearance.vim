@@ -6,6 +6,13 @@ set cursorline                    " Highlight the current line
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
 
-" Changes the cursor from a block to a cursor depending if in insert mode
-let &t_SI = "\<Esc>]50;CursorShape=1\x7" 
+" Set the cursor to a vertical line in insert mode
+" and a solid block in command mode
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+" upon hitting escape to change modes,
+" send successive move-left and move-right
+" commands to immediately redraw the cursor
+inoremap <special> <Esc> <Esc>hl
+
