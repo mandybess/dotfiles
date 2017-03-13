@@ -11,3 +11,6 @@ alias amazon="./gradlew clean amazon assembleRelease"
 
 # run unit test
 alias magic="./gradlew -Punit clean testDebug"
+
+# kill emulator
+alias kill="adb -s emulator-5554 emu kill"
