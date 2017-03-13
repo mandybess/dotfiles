@@ -1,4 +1,4 @@
-" Stolen wholesale from abebw, who stole it wholesale from christoomey,
+" Stolen wholesale from gabebw, who stole it wholesale from christoomey,
 " whose dotfiles you really should  check out:
 " https://github.com/christoomey/dotfiles
 function! s:SourceConfigFilesIn(directory)
@@ -9,6 +9,10 @@ function! s:SourceConfigFilesIn(directory)
     endif
   endfor
 endfunction
+
+call plug#begin()
+call s:SourceConfigFilesIn('plugins')
+call plug#end()
 
 call s:SourceConfigFilesIn('config')
 
