@@ -17,3 +17,6 @@ alias kill="adb -s emulator-5554 emu kill"
 
 # open android studio
 alias oa="open -a 'Android Studio'"
+
+# upload apk to any thoughtbot slack channel
+alias upload="~/.config/android/amandroid.sh"
