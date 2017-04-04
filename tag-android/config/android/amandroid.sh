@@ -22,7 +22,7 @@ FILE_NAME=""
 FILE_PATH=$DEFAULT_RELATIVE_PATH
 
 while getopts "c:n:p:" opt ; do
-    case "${opt}" in
+    case "$opt" in
         c) CHANNEL=$OPTARG;;
         n) FILE_NAME=$OPTARG;;
         p) FILE_PATH=$OPTARG;;
@@ -30,8 +30,8 @@ while getopts "c:n:p:" opt ; do
 done
 
 # check if we've got a file path
-if [ -z $FILE_PATH ]; then 
-  echo "🙅 Oops. Looks like you forgot to add a file path via `- p`. Go back
+if [ -z "$FILE_PATH" ]; then 
+  echo "🙅 Oops. Looks like you forgot to add a file path via '- p'. Go back
   and try again."
   exit 1
 fi
@@ -39,9 +39,7 @@ fi
 # check if file name has .apk extension, if not, add one
 # we do this because Slack is silly and if we don't add the .apk extension it
 # will upload the apk as a zip file
-if [ "$FILE_NAME" != *.apk ]; then
-    FILE_NAME="$FILE_NAME.apk"
-fi
+FILE_NAME="${FILE_NAME%.apk}.apk"
 
 # execute curl
 curl -F file=@"$FILE_PATH" -F channels="$CHANNEL" -F filename="$FILE_NAME" -F token="$TOKEN" "$DOMAIN"
