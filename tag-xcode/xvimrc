@@ -62,3 +62,6 @@ nmap <space>vi :xcmenucmd Capture View Hierarchy<CR>
 
 " Documentation
 nmap <space>d :xcmenucmd Quick Help for Selected Item<CR>
+
+" Make Things Like they are in Android Studio
+map <Space>r :run<CR>
