@@ -1,0 +1,64 @@
+" No status bar
+set laststatus=0
+
+" Search
+set incsearch
+set ignorecase
+set smartcase
+set wrap
+set wrapscan
+set gdefault
+
+" Setup the number line
+set number
+set relativenumber
+
+" Use the system pasteboard
+set clipboard=unnamed
+
+" Better navigation
+nmap H ^
+nmap L $
+
+" Window navigation
+nmap <C-h> <C-w>h
+nmap <C-l> <C-w>l
+
+" Make computers make sense
+nmap D d$
+nmap Y y$
+
+" I'd like the following command to save too
+" it doesn't seem like xvim supports this: \| update<CR>
+vmap s :sort ui<CR>
+
+" vim-unimpared knock off
+nmap ]e "udd"up
+nmap [e "uddk"uP
+
+" Move visual blocks
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
+" Navigate
+nmap <space>ch :xcmenucmd Find Call Hierarchy<CR>
+nmap <space>jp :xcmenucmd Jump to Definition<CR>
+nmap <space>ja :xccmd jumpToDefinitionWithAlternate<CR>
+nmap <space>i :xcmenucmd Jump to Generated Interface<CR>
+
+" Editor
+nmap gcc :xcmenucmd Comment Selection<CR>
+vmap gc  :xcmenucmd Comment Selection<CR>
+nmap <space>f :xcmenucmd Fix All in Scope<CR>
+nmap <space>gb :xcmenucmd Show Blame for Line<CR>
+
+" Product
+nmap <space>C :xccmd compileCurrentFile<CR>
+nmap <space>k :xcmenucmd Clean<CR>
+nmap <space>K :xcmenucmd Clean Build Folder...<CR>
+
+" Debug
+nmap <space>vi :xcmenucmd Capture View Hierarchy<CR>
+
+" Documentation
+nmap <space>d :xcmenucmd Quick Help for Selected Item<CR>
