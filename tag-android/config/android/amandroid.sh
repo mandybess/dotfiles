@@ -9,23 +9,26 @@
 
 # constants
 DOMAIN="https://slack.com/api/files.upload"
-TOKEN=$AMANDROID_SLACK_BOT_TOKEN
 
 # defaults
 DEFAULT_CHANNEL="#slackbot-testing"
 # this assumes you are in the project directory and the main app module is 'app'
 DEFAULT_RELATIVE_PATH="$PWD/app/build/outputs/apk/app-debug.apk"
+# this is for thoughtbot slack
+DEFAULT_TOKEN=$AMANDROID_SLACK_BOT_TOKEN
 
 # variables
 CHANNEL=$DEFAULT_CHANNEL
 FILE_NAME=""
 FILE_PATH=$DEFAULT_RELATIVE_PATH
+TOKEN=$DEFAULT_TOKEN
 
-while getopts "c:n:p:" opt ; do
+while getopts "c:n:p:t:" opt ; do
     case "$opt" in
         c) CHANNEL=$OPTARG;;
         n) FILE_NAME=$OPTARG;;
         p) FILE_PATH=$OPTARG;;
+        t) TOKEN=$OPTARG;;
     esac
 done
 
