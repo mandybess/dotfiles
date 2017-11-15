@@ -71,3 +71,12 @@ screengrab(){
     adb shell rm /sdcard/demo.mp4
 }
 
+avd(){
+    emulator -list-avds | cat -n
+    printf "Select AVD: "
+    read index
+    avd=$(emulator -list-avds | sed "${index}q;d")
+    echo "Selected $avd"
+    emulator -avd $avd -netdelay none -netspeed full
+}
+
