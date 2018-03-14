@@ -58,8 +58,7 @@ record(){
 }
 
 
-# grab the video recorded from the above (screenrecord) function
-# and put it on the Desktop
+# grab the video recorded from the above (screenrecord) function and put it on the Desktop
 grab(){
     # Download the video
     adb pull /sdcard/demo.mp4 ~/Desktop
@@ -68,11 +67,19 @@ grab(){
     adb shell rm /sdcard/demo.mp4
 }
 
-    # Download the video
+## convert the video created by the `screenrecord` function to a GIF and place it on the Desktop
+gif(){
+    # Download the video to the Desktop
     adb pull /sdcard/demo.mp4 ~/Desktop
 
     # Delete the video from the device
     adb shell rm /sdcard/demo.mp4
+
+    # Convert to a GIF named screenshot.gif on the Desktop
+    gifify ~/Desktop/demo.mp4 -o ~/Desktop/screenshot.gif
+
+    # Delete the mp4 from the Desktop
+    rm ~/Desktop/demo.mp4
 }
 
 avd(){
