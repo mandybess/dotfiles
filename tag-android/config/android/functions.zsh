@@ -46,7 +46,7 @@ screenshot(){
 
 
 # record a video of whatever the connected devices is
-screenrecord(){
+record(){
     # start recording
     adb shell screenrecord /sdcard/demo.mp4
 
@@ -60,9 +60,13 @@ screenrecord(){
 
 # grab the video recorded from the above (screenrecord) function
 # and put it on the Desktop
-screengrab(){
-    # start recording
-    #adb shell screenrecord /sdcard/demo.mp4
+grab(){
+    # Download the video
+    adb pull /sdcard/demo.mp4 ~/Desktop
+
+    # Delete the video from the device
+    adb shell rm /sdcard/demo.mp4
+}
 
     # Download the video
     adb pull /sdcard/demo.mp4 ~/Desktop
