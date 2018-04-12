@@ -23,3 +23,6 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 # zstyle doesn't understand the BSD-style $LSCOLORS at all, so use Linux-style
 # $LS_COLORS
 zstyle ':completion:*:ls:*:*' list-colors "$LS_COLORS"
+
+# fastlane completion
+. ~/.fastlane/completions/completion.sh
