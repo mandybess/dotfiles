@@ -1,6 +1,6 @@
 [user]
-  name = Amanda Hill
-  email = amandabesshill@gmail.com
+	name = Amanda Hill
+	email = amandabesshill@gmail.com
 
 [github]
   user = mandybess
@@ -58,3 +58,8 @@
   clean = git media clean %f
   smudge = git media smudge %f
 
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
