@@ -59,8 +59,8 @@ zstyle ':vcs_info:git*' actionformats $(prompt_red "%b|%a")
 
 prompt_git_status_symbol(){
   local letter
-  local gucci="👍🏼 "
-  local no_gucci="🙅🏻 "
+  local gucci="%2{👍🏼%} "
+  local no_gucci="%2{🙅🏻%} "
 
   case $(prompt_git_status) in
     changed) letter=$(prompt_red $no_gucci);;
