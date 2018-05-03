@@ -42,6 +42,8 @@ For every IDE or application I use in my regular development there is a correspo
 
 [intelliji-themes]: https://github.com/mandybess/dotfiles/intelliji-themes
 
+For my desktop :computer: wallpapers, I like to use [larknraven](https://www.etsy.com/shop/larknraven) designs as featured on [Design Love Fest](http://www.designlovefest.com/?s=lark+raven) :art:
+
 ## attribution :couple:  
 
 Many scripts and configurations (including this sentence) have been inspired by or outright stolen from
