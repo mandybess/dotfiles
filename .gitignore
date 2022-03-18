@@ -1,2 +1,3 @@
 # ignore my secrets file as it is full of my secrets 🔮
 tag-zsh/config/zsh/secrets.zsh
+Brewfile.lock.json
