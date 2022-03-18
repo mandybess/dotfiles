@@ -1,0 +1,11 @@
+!/usr/bin/env sh
+
+set -e
+
+echo ""
+echo "==========================================="
+echo "Linking dotfiles"
+echo ""
+
+RCRC=rcrc rcup -v -d .
+© 2022 GitHub, Inc.

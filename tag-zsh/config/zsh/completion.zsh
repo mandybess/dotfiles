@@ -14,4 +14,4 @@ zstyle ':completion:*' insert-tab pending
 zstyle ':completion:*:ls:*:*' list-colors "$LS_COLORS"
 
 # fastlane completion
-. ~/.fastlane/completions/completion.sh
+#. ~/.fastlane/completions/completion.sh

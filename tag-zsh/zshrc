@@ -1,11 +1,8 @@
 # your projects folder so that we can `c [tab]` to
-export PROJECTS="$HOME/code"
+export PROJECTS="$HOME/Development"
 
 # shortcut to this dotfiles path is $DOTFILES
 export DOTFILES="$PROJECTS/dotfiles"
-
-# Your personal Dropbox folder
-export DROPBOX="$HOME/Dropbox (Personal)"
 
 # source the base zshrc configurations first
 for config_file (~/.config/zsh/*.zsh) source $config_file
@@ -14,4 +11,4 @@ for config_file (~/.config/zsh/*.zsh) source $config_file
 # the `^zsh` bit means all directories _except_ the `zsh` directory
 for config_file (~/.config/^zsh/*.zsh) source $config_file
 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

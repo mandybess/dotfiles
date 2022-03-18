@@ -1,0 +1,29 @@
+#!/bin/sh
+
+set -e
+
+echo ""
+echo "==========================================="
+echo "Setting up Homebrew"
+echo ""
+#
+
+which -s brew
+if [[ $? != 0 ]] ; then
+  echo "Homebrew not found. Installing Homebrew..."
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+else
+  echo "Homebrew already installed. Updating..."
+  brew update
+  brew upgrade
+fi
+
+
+echo "Installing brew bundle"
+brew tap Homebrew/bundle
+
+echo "Installing homebrew dependencies"
+
+for brewfile in */Brewfile; do
+  brew bundle --file="$brewfile"
+done
